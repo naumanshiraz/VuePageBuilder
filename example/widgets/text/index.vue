@@ -11,7 +11,8 @@
       backgroundColor: val.bgColor,
       backgroundImage: 'url(' + val.backPic + ')',
       color: val.color,
-      fontSize: '15px'
+      fontSize: '15px',
+      margin: 0
     }"
     contenteditable="true"
     @input="(e) => updateText(e, val.uuid)"
