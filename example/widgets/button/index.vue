@@ -17,13 +17,12 @@
 </template>
 
 <script>
-import stylec from './style.vue'
+
 const WIDGET_NAME = 'braid-button'
 
 export default {
   name: WIDGET_NAME,
   title: 'Button',
-  panel: stylec,
   setting: {
     type: WIDGET_NAME,
     isContainer: false,

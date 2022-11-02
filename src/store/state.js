@@ -19,7 +19,7 @@ export default {
   page: {
     page: true,
     title: 'Test Page',
-    height: 750,
+    height: 1500,
     endTime: new Date(),
     backgroundColor: '#fff'
   },

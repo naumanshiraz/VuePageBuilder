@@ -7,6 +7,11 @@
       <section class="navbar-section">
         <a
           class="btn btn-link tooltip tooltip-bottom"
+          @click="dele">
+          <vpd-icon name="trash-2" /> {{ $t('data.actions.delete') }}
+        </a>
+        <a
+          class="btn btn-link tooltip tooltip-bottom"
           @click="save"><vpd-icon name="save" /> {{ $t('data.actions.save') }}</a>
       </section>
     </div>
@@ -28,16 +33,6 @@ export default {
     }
   },
   mounted () {
-    document.addEventListener(
-      'keyup',
-      e => {
-        e.stopPropagation()
-        if ((e.ctrlKey || e.metaKey) && e.keyCode === 67) {
-        }
-      },
-      true
-    )
-
     document.addEventListener(
       'keyup',
       e => {
@@ -64,6 +59,10 @@ export default {
   methods: {
     save () {
       this.$vpd.dispatch('save')
+    },
+
+    dele () {
+      this.$vpd.commit('delete')
     }
   }
 }

@@ -19,13 +19,11 @@
 </template>
 
 <script>
-import stylec from './style.vue'
 const WIDGET_NAME = 'braid-txt'
 
 export default {
   name: WIDGET_NAME,
   title: 'Paragraph',
-  panel: stylec,
   setting: {
     type: WIDGET_NAME,
     animationName: '',
@@ -53,12 +51,7 @@ export default {
 
   methods: {
     updateText (e, uuid) {
-      let text = e.target.innerHTML
-      this.$vpd.commit('updateData', {
-        uuid: uuid,
-        key: 'text',
-        value: text
-      })
+      this.$emit('update', e.target.innerText);
     }
   }
 }

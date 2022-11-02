@@ -16,13 +16,11 @@
 </template>
 
 <script>
-import stylec from './style.vue'
 const WIDGET_NAME = 'braid-container'
 
 export default {
   name: WIDGET_NAME,
   title: 'Container',
-  panel: stylec,
   setting: {
     type: WIDGET_NAME,
     align: 'flex-start',
